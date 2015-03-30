@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>My Parallax Website</title>
+       <link rel="stylesheet" href="style.css"/>
+	   <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+	<script>
+   
+<!----- JQUERY FOR SLIDING NAVIGATION --->   
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->   
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+});
+</script>
+
+
+ </head> 
+<body>  
+<header id="header">
+<div class="content">
+<div id="logo"><a href=""> Rj Cruz </a></div>
+<nav id="nav">
+	<ul>
+		<li><a href="#slide1" class="active" title="Next Section" >About Me</a></li>
+		<li><a href="#slide2" title="Next Section">Education</a></li>
+		<li><a href="#slide3" title="Next Section">Skills</a></li>
+		<li><a  href="#slide4" title="Next Section">Portfolio</a></li>
+		<li><a href="#slide5" title="Next Section">Contacts</a></li>
+	</ul>
+</nav>
+</div>
+</header>	
+  	
+	<div id="slide1">
+	<img id="profile" src="2x2.jpg">
+	<h1>Hello!</h1>
+	<h1>I'm Ranniel John Cruz</h1>
+	<div class="content">
+	<p id="description">I'm 3rd year student, taking up Bachelor of Science in Information Technology with specialization in Multimedia at AMA Computer College - Cavite Campus.
+	I'm good in photo editing, video editing and photography.</p>
+		</div> 
+    </div> 
+
+	<div id="slide2">
+	<div class="content" >
+	<div class="note">
+	<h2>Elementary</h2>
+	<p>Sto Tomas Elementary School</p>
+	<h2>High School</h2>
+	<p>San Quintin High School</p>
+	<h2>College</h2>
+	<p>Lyceum of the Philippines University - Cavite <br> AMA Computer College - Cavite</p>
+		</div> 
+		</div> 
+    </div> 
+	
+	
+   <div id="slide3">
+		<h1>Skills Percentage</h1>
+		<ul id="percentage">
+		<li><img src="60per.png"><p>Photography</p></li>
+		<li><img src="70per.png"><p>Photoshop</p></li>
+		<li><img src="63per.png"><p>HTML</p></li>
+		<li><img src="63per.png"><p>CSS</></li>
+		</ul>
+    </div> 
+	
+	
+	<div id="slide4">
+		 <div id='image-container'>
+				<div class='img' id='img-1'>
+					<div class='mask'></div>
+					<img src='image1.jpg' />
+				</div>	
+				<div class='img' id='img-2'>
+					<div class='mask'></div>
+					<img src='image2.jpg' />
+				</div>	
+				<div class='img' id='img-3'>
+					<div class='mask'></div>
+					<img src='image3.jpg' />
+				</div>	
+				<div class='img' id='img-4'>
+					<div class='mask'></div>
+					<img src='image4.jpg' />
+				</div>	
+				<div class='img' id='img-5'>
+					<div class='mask'></div>
+					<img src='image5.jpg' />
+				</div>	
+				<div class='img' id='img-6'>
+					<div class='mask'></div>
+					<img src='image6.jpg' />
+				</div>	
+    </div> 
+	 </div> 
+	
+	<div id="slide5">
+	<h1>Contact</h1>
+	<div class="content" >
+	<div id="content" >
+	<p>Address: Imus, Cavite, Philippines
+	<p>Phone Number: 09752168037</p>
+	<p>Email Address: cruzrannieljohn@gmail.com</p>
+	</div> 
+	</div> 
+	
+	<div class="image">
+	<a href="https://www.facebook.com" target="_blank"><img id="fb" src="facebook.png" ></a>
+	<a href="https://www.gmail.com" target="_blank"><img id="gg" src="google.png"></a>
+	<a href="https://www.instagram.com" target="_blank"><img id="ig" src="insta.png">
+	</div>
+    </div> 
+</body>
+</html>

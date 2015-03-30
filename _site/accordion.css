@@ -1,0 +1,44 @@
+/* Clean up the lists styles */
+ul.accordion {
+  margin-left: 270px;
+    width: 60%;
+    list-style: none;
+
+    padding: 0;
+}
+
+/* Hide the radio buttons */
+/* These are what allow us to toggle content panes */
+ul.accordion label + input[type='radio'] {
+    display: none;
+}
+
+/* Give each content pane some styles */
+ul.accordion li {
+    background-color: #33ADFF;
+    border-bottom: 1px solid #000;
+}
+
+/* Make the main tab look more clickable */
+ul.accordion label {
+    background-color: #004C80;
+    color: #FFFFFF;
+    display: block;
+    padding: 10px;
+}
+
+ul.accordion label:hover {
+    cursor: pointer;
+}
+
+/* Set up the div that will show and hide */
+ul.accordion div.content {
+    overflow: hidden;
+    padding: 0 10px;
+    display: none;
+}
+
+/* Show the content boxes when the radio buttons are checked */
+ul.accordion label + input[type='radio']:checked + div.content {
+    display: block;
+}
